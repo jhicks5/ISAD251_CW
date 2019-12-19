@@ -8,7 +8,7 @@ include_once 'header.php';
                 <h2>Login</h2>
             </div>
             <div class="card-body">
-                <form method="post" action="process_registration.php" id="registration" class="login-form">
+                <form method="post" action="process_login.php" id="registration" class="login-form">
                     <div class="form-group text-center">
                         <p><span>Please input Login details below</span></p>
                     </div>
