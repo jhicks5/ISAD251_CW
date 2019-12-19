@@ -41,6 +41,10 @@
             background-image: url("../assets/img/pubBG.jpg")
             min-height: 75%;
         }
+
+        .mt-6 {
+            margin-top: 5.25rem !important;
+        }
     </style>
     <title>The Rusty Spoon</title>
 </head>
