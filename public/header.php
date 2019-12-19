@@ -56,7 +56,7 @@
             <a href="landing.php" class="w3-button w3-block w3-black">HOME</a>
         </div>
         <div class="w3-col s4">
-            <a href="#orders" class="w3-button w3-block w3-black">ORDERS</a>
+            <a href="_orders.php" class="w3-button w3-block w3-black">ORDERS</a>
         </div>
         <div class="w3-col s4">
             <a href="login.php" class="w3-button w3-block w3-black">LOGIN</a>
