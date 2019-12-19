@@ -53,7 +53,7 @@
 <div class="w3-top">
     <div class="w3-row w3-padding w3-black">
         <div class="w3-col s4">
-            <a href="index.php" class="w3-button w3-block w3-black">HOME</a>
+            <a href="landing.php" class="w3-button w3-block w3-black">HOME</a>
         </div>
         <div class="w3-col s4">
             <a href="#orders" class="w3-button w3-block w3-black">ORDERS</a>
@@ -64,7 +64,7 @@
     </div>
 </div>
 
-<header class="bgimg w3-display-container w3-grayscale-min" id="home" style="height: 200px">
+<header class="w3-display-container w3-grayscale-min" id="home" style="padding-top: 250px">
     <div class="w3-display-middle w3-center">
         <span class="w3-text-black" style="font-size:70px">The Rusty Spoon</span>
     </div>
