@@ -1,6 +1,5 @@
 <?php
 
-/*include 'dbFunctions.php';*/
 include_once 'header.php';
 include_once '../src/model/repository.php';
 
@@ -26,7 +25,6 @@ if(isset($_POST['table']))
         <p>
     <?php
 
-    /*$results = getAll($tablename);*/
     if (isset($tablename))
     {
         $db = new repository();

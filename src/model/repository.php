@@ -33,7 +33,9 @@ class repository
         $sql = "SELECT * FROM ";
         switch ($tableName)
         {
-            case "Products" : $sql = $sql." Products";
+            case "Products-Drinks" : $sql = $sql." Products WHERE Is_Drink = '1'";
+                break;
+            case "Products-Food" : $sql = $sql." Products WHERE Is_Drink = '0'";
                 break;
             case "Customers" : $sql = $sql." Customers";
                 break;
