@@ -61,10 +61,10 @@ echo "CurrentCustID = ",$_SESSION["currentCustID"];
         <div class="w3-col s4">
             <a href="_orders.php" class="w3-button w3-block w3-black">ORDERS</a>
         </div>
-        <div id="login" class="w3-col s4">
+        <div id="login" class="w3-col s4" style="display: inline">
             <a href="login.php" class="w3-button w3-block w3-black">LOGIN</a>
         </div>
-        <div id="logout" class="w3-col s4">
+        <div id="logout" class="w3-col s4" style="display: none">
             <a href="logout.php" class="w3-button w3-block w3-black">LOGOUT</a>
         </div>
     </div>
@@ -83,12 +83,9 @@ echo "CurrentCustID = ",$_SESSION["currentCustID"];
 </html>
 <?php
     if(isset($_SESSION["currentCustID"])){?>
-    <script>
-        document.getElementById("logout").style.display = "inline";
-        document.getElementById("login").style.display = "none";
-    </script>
+        <script>
+            document.getElementById("logout").style.display = "inline";
+            document.getElementById("login").style.display = "none";
+        </script>
 <?php }
-else{
-    echo "There is no user";
-}
 ?>
