@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once 'header.php';
 ?>
 <div class="container" style="padding: 60px">
@@ -22,7 +23,7 @@ include_once 'header.php';
                         <input type="text" id="postcode" placeholder="Postcode..." minlength="1" name="postcode" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <button style="" type="submit" name="register" id="register" class="mt-6 btn btn-dark">Login</button>
+                        <button style="" type="submit" name="login" id="login" class="mt-6 btn btn-dark">Login</button>
                     </div>
                 </form>
             </div>
@@ -40,15 +41,15 @@ include_once 'header.php';
                     <hr/>
                     <div class="form-group">
                         <label for="customer_name">Customer Name:</label>
-                        <input type="text" id="customer_name" placeholder="Customer Name..." minlength="1" name="customer_name" class="form-control" required>
+                        <input type="text" id="regCustomer_name" placeholder="Customer Name..." minlength="1" name="regCustomer_name" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="postcode">Postcode:</label>
-                        <input type="text" id="postcode" placeholder="Postcode..." minlength="1" name="postcode" class="form-control" required>
+                        <input type="text" id="regPostcode" placeholder="Postcode..." minlength="1" name="regPostcode" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="text" id="email" placeholder="Email..." minlength="1" name="email" class="form-control" required>
+                        <input type="text" id="regEmail" placeholder="Email..." minlength="1" name="regEmail" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <button type="submit" name="register" id="register" class="btn btn-dark">Register</button>

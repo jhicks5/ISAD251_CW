@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once 'header.php';
 ?>
 <div class="container mt-5">

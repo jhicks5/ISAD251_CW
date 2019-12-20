@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once 'header.php';
 
 if (isset($_POST['register']))
