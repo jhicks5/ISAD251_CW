@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once 'header.php';
 
 if (isset($_POST['register']))
@@ -21,4 +20,4 @@ if (isset($_POST['register']))
 </script>
 
 <?php
-include_once 'index.php'; ?>
+include_once 'landing.php'; ?>
