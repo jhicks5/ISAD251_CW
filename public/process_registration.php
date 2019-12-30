@@ -20,4 +20,4 @@ if (isset($_POST['register']))
 </script>
 
 <?php
-include_once 'landing.php'; ?>
+include_once 'index.php'; ?>

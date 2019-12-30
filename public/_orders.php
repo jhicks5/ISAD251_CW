@@ -4,7 +4,7 @@ include_once '../src/model/repository.php';
 if(empty($_SESSION['currentCustID'])){
     header("Location: login.php");
 }
-$tablename = 'Orders';
+$tablename = 'CustOrders';
 ?>
 
 <div class="w3-cell">

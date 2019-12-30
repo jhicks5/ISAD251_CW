@@ -41,6 +41,7 @@ class repository
                 break;
             case "Orders" : $sql = $sql." Orders";
                 break;
+            case "CustOrders" : $sql = $sql."Orders WHERE CustomerId = '{$_SESSION["currentCustId"]}'";
         }
 
         $statement = $this->connection->prepare($sql);

@@ -19,7 +19,7 @@ if (isset($tablename)) {
             if ($row['customerEmail'] == $customerEmail && $row['customerPostcode'] == $postcode) {
                 $_SESSION["currentCustID"] = $row['CustomerID'];
                 $found = TRUE;
-                header("Location: landing.php");
+                header("Location: index.php");
             }
         }
         if($found == FALSE){

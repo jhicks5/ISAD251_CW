@@ -13,6 +13,6 @@ if(empty($_SESSION["currentCustID"])){
 <script>
     setTimeout(function(){
         document.getElementById("logoutSuccess").style.display = "none";
-        window.location.replace("landing.php")
+        window.location.replace("index.php")
     }, 3000);
 </script>
