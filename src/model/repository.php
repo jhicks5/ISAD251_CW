@@ -1,6 +1,9 @@
 <?php
 
 include_once 'customer.php';
+session_start();
+$_SESSION["currentCustID"];
+$_SESSION["currentOrderID"];
 
 class repository
 {
@@ -41,7 +44,10 @@ class repository
                 break;
             case "Orders" : $sql = $sql." Orders";
                 break;
-            case "CustOrders" : $sql = $sql."Orders WHERE CustomerId = '{$_SESSION["currentCustId"]}'";
+            case "CustOrders" : $sql = $sql."Orders WHERE CustomerId = '{$_SESSION["currentCustID"]}'";
+                break;
+            case "OrderDetails" : $sql = $sql."orderdetails WHERE OrderId = '{$_SESSION["currentOrderID"]}'";
+                break;
         }
 
         $statement = $this->connection->prepare($sql);

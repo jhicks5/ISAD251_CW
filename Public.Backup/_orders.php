@@ -4,11 +4,12 @@ include_once '../src/model/repository.php';
 if(empty($_SESSION['currentCustID'])){
     header("Location: login.php");
 }
+$tablename = 'Orders';
 ?>
 
 <div class="w3-cell">
     <?php
-    $tablename = 'orderdetails';
+
     if(isset($tablename)) {
         $db = new Repository();
         $results = $db->getAll($tablename);
@@ -41,22 +42,22 @@ if(empty($_SESSION['currentCustID'])){
     ?>
 </div>
 
+<!--
 <div class="container pt-5">
-    <div class="card-deck mx-auto" style="width:600px">
+    <div class="card-deck">
         <?php
-        $tablename = 'CustOrders';
         if (isset($tablename)) {
             $db = new repository();
             $results = $db->getAll($tablename);
 
             foreach($results as $row){
                 ?>
-                <div class="card">
+                <div class="card" style="width:400px">
                     <a href="#" style="color:black">
-                        <img class="card-img-top" src="../assets/img/orders_btn.png" alt="Order image">
+                        <img class="card-img-top" src="../assets/img/foodTN_temp.png" alt="Drink image">
                         <div class="card-body text-center">
-                            <p class="card-text">Order ID: <?php echo $row['OrderId']; ?></p>
-                            <p class="card-text">Order Date: <?php echo $row['OrderDate']; ?></p>
+                            <p class="card-text"><?php echo $row['OrderId']; ?></p>
+                            <p class="card-text">£<?php echo $row['OrderDate']; ?></p>
                         </div>
                     </a>
                 </div>
@@ -64,3 +65,4 @@ if(empty($_SESSION['currentCustID'])){
         <?php } ?>
     </div>
 </div>
+-->
