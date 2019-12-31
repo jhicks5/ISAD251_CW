@@ -3,6 +3,8 @@ session_start();
 
 $_SESSION["currentCustID"];
 $_SESSION["currentOrderID"];
+$_SESSION["liveOrderID"];
+$_SESSION["fromFood"];
 echo "CurrentCustID = ",$_SESSION["currentCustID"];
 ?>
 

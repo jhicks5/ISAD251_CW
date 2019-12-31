@@ -4,6 +4,7 @@ include_once 'customer.php';
 session_start();
 $_SESSION["currentCustID"];
 $_SESSION["currentOrderID"];
+$_SESSION["orderStarted"];
 
 class repository
 {
@@ -58,5 +59,17 @@ class repository
         return $resultSet;
     }
 
+    public function addToOrder($tableName)
+    {
+        $curDate = date("Y-m-d");
+        $sql = "INSERT INTO ";
+        switch($tableName)
+        {
+            case "Orders" : $sql = $sql."Orders (OrderDate, CustomerId) VALUES('{$curDate}', '{$_SESSION["currentCustID"]}')";
+        }
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+    }
 
 }
