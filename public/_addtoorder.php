@@ -28,6 +28,7 @@ setTimeout(function(){
 <?php
 if(!isset($_SESSION["liveOrderID"])){
     $tablename = "Orders";
+    $_SESSION["liveOrderID"] = TRUE;
     if (isset($tablename)) {
         $db = new repository();
         $db->addToOrder($tablename);
