@@ -37,6 +37,10 @@ $selectedOrder = $_GET['selectcontrol'];
             }
             echo '</table>';
         }
+        else{
+            ?><div>No Data Found for Order</div><?php
+        }
     }
     ?>
+    <a href="_orders.php" class="btn btn-primary active mt-4">Go Back</a>
 </div>

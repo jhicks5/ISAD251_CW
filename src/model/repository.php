@@ -59,7 +59,7 @@ class repository
         return $resultSet;
     }
 
-    public function addToOrder($tableName)
+    public function createOrder($tableName)
     {
         $curDate = date("Y-m-d");
         $sql = "INSERT INTO ";
