@@ -9,7 +9,7 @@ if(empty($_SESSION['currentCustID'])){
 <form action="../public/_ordersdetails.php" method="GET">
     <div class="container pt-5">
         <div class="form-group">
-            <label for="selectOrderForm">Select The Order ID</label>
+            <label for="selectOrderForm" class="pb-4">Select a Previous or Existing Order</label>
             <select class="form-control form-control-lg" id="selectcontrol" name="selectcontrol">
             <?php
             $tablename = 'CustOrders';
@@ -29,34 +29,39 @@ if(empty($_SESSION['currentCustID'])){
     </div>
 </form>
 
-<?php
-$tablename = 'OrderDetails';
-$_SESSION["selectedOrderID"] = $selectedOrder;
-if(isset($tablename)) {
-    $db = new Repository();
-    $results = $db->getAll($tablename);
+<div class="container pt-5">
+    <label class="pt-4 pb-4">Currently Active Orders</label>
+    <?php
+    $tablename = 'OrderDetails';
+    $_SESSION["liveOrderID"] = $selectedOrder;
+    if(isset($tablename)) {
+        $db = new Repository();
+        $results = $db->getAll($tablename);
 
-    if ($results) {
-        $columns = empty($results) ? array() : array_keys($results[0]);
-        $idColumn = $columns[0];
-        $tableString = '<table class="w3-table w3-striped w3-bordered"><tr>';
-        $inputString = '';
-        $insertString = '';
-        foreach ($columns as $column) {
-            $tableString .= '<th>' . $column . '</th>';
-            $inputString .= '<th>' . $column . '</th>';
-            $insertString .= '<td><input type=\'text\' name=\'' . $column . '\'/></td>';
+        if ($results) {
+            $columns = empty($results) ? array() : array_keys($results[0]);
+            $idColumn = $columns[0];
+            $tableString = '<table class="w3-table w3-striped w3-bordered"><tr>';
+            $inputString = '';
+            $insertString = '';
+            foreach ($columns as $column) {
+                $tableString .= '<th>' . $column . '</th>';
+                $inputString .= '<th>' . $column . '</th>';
+                $insertString .= '<td><input type=\'text\' name=\'' . $column . '\'/></td>';
 
-        }
-        echo $tableString;
-        foreach ($results as $row) {
-            echo '<tr>';
-
-            foreach ($row as $cell) {
-                echo '<td>' . $cell . '</td>';
             }
+            echo $tableString;
+            foreach ($results as $row) {
+                echo '<tr>';
+
+                foreach ($row as $cell) {
+                    echo '<td>' . $cell . '</td>';
+                }
+            }
+            echo '</table>';
         }
-        echo '</table>';
     }
-}
-?>
+    ?>
+    <button type="Checkout" value="Checkout" id="Checkout" class="btn btn-primary mt-4">Checkout</button>
+    <button type="Cancel" value="Cancel" id="Cancel" class="btn btn-danger mt-4">Cancel Order</button>
+</div>
