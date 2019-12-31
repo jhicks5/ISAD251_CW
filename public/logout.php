@@ -14,5 +14,5 @@ if(empty($_SESSION["currentCustID"])){
     setTimeout(function(){
         document.getElementById("logoutSuccess").style.display = "none";
         window.location.replace("index.php")
-    }, 3000);
+    }, 1500);
 </script>

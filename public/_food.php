@@ -14,8 +14,8 @@ $tablename = 'Products-Food';
             $_SESSION["fromFood"] = TRUE;
             foreach($results as $row){
                 ?>
-                <div class="card" style="width:400px">
-                    <a href="_addtoorder.php" style="color:black">
+                <div onclick="cardClick(this.id)" class="card" style="width:400px" id="<?php echo $row['ProductId']; ?>">
+                    <a style="color:black">
                         <img class="card-img-top" src="../assets/img/foodTN_temp.png" alt="Drink image">
                         <div class="card-body text-center">
                             <p class="card-text"><?php echo $row['Product_Details']; ?></p>
@@ -27,3 +27,12 @@ $tablename = 'Products-Food';
         <?php } ?>
     </div>
 </div>
+
+<script>
+    function cardClick(cardID){
+        var userconfirm = confirm("Are you sure you want to add this item to your order?");
+        if (userconfirm === true){
+            location.href = "_addtoorder.php?itemID="+cardID;
+        }
+    }
+</script>

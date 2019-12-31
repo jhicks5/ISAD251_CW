@@ -5,6 +5,8 @@ include_once '../src/model/repository.php';
 if(empty($_SESSION['currentCustID'])){
     header("Location: login.php");
 }
+$passedID = $_GET['itemID'];
+echo 'itemID', $passedID;
 ?>
 
 <div id="addOrderSuccess" class="card bg-success text-white w3-animate-opacity mt-4">
@@ -20,13 +22,22 @@ else{
 }
 
 if(!isset($_SESSION["liveOrderID"])){
-    $tablename = "Orders";
-    $_SESSION["liveOrderID"] = TRUE;
     if (isset($tablename)) {
         $db = new repository();
-        $db->createOrder($tablename);
+        $db->createOrder();
     }
 }
+
+if(isset($passedID)){
+    $itemID = $passedID;
+    $orderID = $_SESSION['liveOrderID'];
+    if (isset($itemID) && isset($orderID)){
+        $db = new repository();
+        $db->addToOrder($itemID, $orderID);
+    }
+
+}
+
 ?>
 
 <script>
@@ -34,3 +45,4 @@ if(!isset($_SESSION["liveOrderID"])){
         document.getElementById("addOrderSuccess").style.display = "none";
     }, 3000);
 </script>
+<?php  ?>

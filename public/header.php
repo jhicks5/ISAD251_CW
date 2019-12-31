@@ -2,10 +2,11 @@
 session_start();
 
 $_SESSION["currentCustID"];
-$_SESSION["currentOrderID"];
+$_SESSION["selectedOrderID"];
 $_SESSION["liveOrderID"];
 $_SESSION["fromFood"];
 echo "CurrentCustID = ",$_SESSION["currentCustID"];
+echo "Current order is: ", $_SESSION["liveOrderID"];
 ?>
 
 

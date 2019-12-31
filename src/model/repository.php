@@ -5,6 +5,7 @@ session_start();
 $_SESSION["currentCustID"];
 $_SESSION["currentOrderID"];
 $_SESSION["orderStarted"];
+$_SESSION["liveOrderID"];
 
 class repository
 {
@@ -47,7 +48,7 @@ class repository
                 break;
             case "CustOrders" : $sql = $sql."Orders WHERE CustomerId = '{$_SESSION["currentCustID"]}'";
                 break;
-            case "OrderDetails" : $sql = $sql."orderdetails WHERE OrderId = '{$_SESSION["currentOrderID"]}'";
+            case "OrderDetails" : $sql = $sql."orderdetails WHERE OrderId = '{$_SESSION["selectedOrderID"]}'";
                 break;
         }
 
@@ -59,17 +60,29 @@ class repository
         return $resultSet;
     }
 
-    public function createOrder($tableName)
+    public function createOrder()
     {
         $curDate = date("Y-m-d");
-        $sql = "INSERT INTO ";
-        switch($tableName)
-        {
-            case "Orders" : $sql = $sql."Orders (OrderDate, CustomerId) VALUES('{$curDate}', '{$_SESSION["currentCustID"]}')";
-        }
+        $sql = "INSERT INTO Orders (OrderDate, CustomerId) VALUES('{$curDate}', '{$_SESSION["currentCustID"]}')";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+
+        $sql = "SELECT OrderId FROM orders WHERE CustomerId = '{$_SESSION["currentCustID"]}' ORDER BY OrderId DESC LIMIT 1";
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+
+        $resultArray = $statement->fetch(PDO::FETCH_NUM);
+        print_r($resultArray);
+        $_SESSION["liveOrderID"] = reset($resultArray);
+        echo "Current Order Is: ", $_SESSION["liveOrderID"];
+    }
+
+    public function addToOrder($itemID, $orderID)
+    {
+        $sql = "INSERT INTO orderdetails (OrderId, ProductId, Quantity) VALUES('{$orderID}', '{$itemID}', 1)";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute();
     }
-
 }

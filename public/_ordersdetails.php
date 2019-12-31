@@ -8,7 +8,7 @@ $selectedOrder = $_GET['selectcontrol'];
 <div class="container pt-5">
     <?php
     $tablename = 'OrderDetails';
-    $_SESSION["currentOrderID"] = $selectedOrder;
+    $_SESSION["selectedOrderID"] = $selectedOrder;
     if(isset($tablename)) {
         $db = new Repository();
         $results = $db->getAll($tablename);

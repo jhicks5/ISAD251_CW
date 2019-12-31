@@ -29,3 +29,34 @@ if(empty($_SESSION['currentCustID'])){
     </div>
 </form>
 
+<?php
+$tablename = 'OrderDetails';
+$_SESSION["selectedOrderID"] = $selectedOrder;
+if(isset($tablename)) {
+    $db = new Repository();
+    $results = $db->getAll($tablename);
+
+    if ($results) {
+        $columns = empty($results) ? array() : array_keys($results[0]);
+        $idColumn = $columns[0];
+        $tableString = '<table class="w3-table w3-striped w3-bordered"><tr>';
+        $inputString = '';
+        $insertString = '';
+        foreach ($columns as $column) {
+            $tableString .= '<th>' . $column . '</th>';
+            $inputString .= '<th>' . $column . '</th>';
+            $insertString .= '<td><input type=\'text\' name=\'' . $column . '\'/></td>';
+
+        }
+        echo $tableString;
+        foreach ($results as $row) {
+            echo '<tr>';
+
+            foreach ($row as $cell) {
+                echo '<td>' . $cell . '</td>';
+            }
+        }
+        echo '</table>';
+    }
+}
+?>
