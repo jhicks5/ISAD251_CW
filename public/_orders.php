@@ -64,7 +64,7 @@ if(empty($_SESSION['currentCustID'])){
     ?>
     <div id = "noOrders" class="pt-3 pb-4">There are no currently active orders</div>
     <a type="Checkout" id="Checkout" class="btn btn-primary text-white mt-4">Checkout</a>
-    <a onclick="cancelClick()" href="cancel_order.php" type="Cancel" id="Cancel" class="btn btn-danger text-white mt-4">Cancel Order</a>
+    <a onclick="cancelClick()" type="Cancel" id="Cancel" class="btn btn-danger text-white mt-4">Cancel Order</a>
 </div>
 <?php
     if(!$results){
