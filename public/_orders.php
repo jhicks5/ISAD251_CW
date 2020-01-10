@@ -33,7 +33,7 @@ if(empty($_SESSION['currentCustID'])){
     <label class="pt-4 pb-4">Currently Active Orders</label>
     <?php
     $tablename = 'OrderDetails';
-    $_SESSION["liveOrderID"] = $selectedOrder;
+    //$_SESSION["liveOrderID"] = $selectedOrder;
     if(isset($tablename)) {
         $db = new Repository();
         $results = $db->getAll($tablename);
@@ -62,6 +62,28 @@ if(empty($_SESSION['currentCustID'])){
         }
     }
     ?>
-    <button type="Checkout" value="Checkout" id="Checkout" class="btn btn-primary mt-4">Checkout</button>
-    <button type="Cancel" value="Cancel" id="Cancel" class="btn btn-danger mt-4">Cancel Order</button>
+    <div id = "noOrders" class="pt-3 pb-4">There are no currently active orders</div>
+    <a type="Checkout" id="Checkout" class="btn btn-primary text-white mt-4">Checkout</a>
+    <a onclick="cancelClick()" href="cancel_order.php" type="Cancel" id="Cancel" class="btn btn-danger text-white mt-4">Cancel Order</a>
 </div>
+<?php
+    if(!$results){
+        ?>
+        <script>document.getElementById("Cancel").style.display = "none";</script>
+        <script>document.getElementById("Checkout").style.display = "none";</script>
+        <?php
+    }
+    if($results){
+    ?>
+    <script>document.getElementById("noOrders").style.display = "none";</script>
+    <?php
+    }?>
+
+<script>
+    function cancelClick(cardID){
+        let userconfirm = confirm("Are you sure you want to cancel this order?");
+        if (userconfirm === true){
+            location.href = "cancel_order.php";
+        }
+    }
+</script>

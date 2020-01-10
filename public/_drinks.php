@@ -30,7 +30,7 @@ $tablename = 'Products-Drinks';
 
 <script>
     function cardClick(cardID){
-        var userconfirm = confirm("Are you sure you want to add this item to your order?");
+        let userconfirm = confirm("Are you sure you want to add this item to your order?");
         if (userconfirm === true){
             location.href = "_addtoorder.php?itemID="+cardID;
         }

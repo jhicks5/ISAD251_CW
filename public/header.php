@@ -5,8 +5,8 @@ $_SESSION["currentCustID"];
 $_SESSION["selectedOrderID"];
 $_SESSION["liveOrderID"];
 $_SESSION["fromFood"];
-echo "CurrentCustID = ",$_SESSION["currentCustID"];
-echo "Current order is: ", $_SESSION["liveOrderID"];
+//echo "CurrentCustID = ",$_SESSION["currentCustID"];
+//echo "Current order is: ", $_SESSION["liveOrderID"];
 ?>
 
 
@@ -23,9 +23,6 @@ echo "Current order is: ", $_SESSION["liveOrderID"];
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -33,9 +30,6 @@ echo "Current order is: ", $_SESSION["liveOrderID"];
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
 
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet">
-
-    <script src='http://code.jquery.com/jquery-1.9.1.js'></script>
-    <script src='http://code.jquery.com/ui/1.10.2/jquery-ui.js'></script>
 
     <style>
         body {

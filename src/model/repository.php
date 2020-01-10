@@ -48,8 +48,9 @@ class repository
                 break;
             case "CustOrders" : $sql = $sql."Orders WHERE CustomerId = '{$_SESSION["currentCustID"]}'";
                 break;
-            case "OrderDetails" : $sql = $sql."orderdetails WHERE OrderId = '{$_SESSION["selectedOrderID"]}'";
+            case "OrderDetails" : $sql = $sql."orderdetails WHERE OrderId = '{$_SESSION["liveOrderID"]}'";
                 break;
+            case "prevOrderDetails": $sql = $sql."orderdetails WHERE OrderId = '{$_SESSION["selectedOrderID"]}'";
         }
 
         $statement = $this->connection->prepare($sql);
@@ -73,14 +74,22 @@ class repository
         $statement->execute();
 
         $resultArray = $statement->fetch(PDO::FETCH_NUM);
-        print_r($resultArray);
+        //print_r($resultArray);
         $_SESSION["liveOrderID"] = reset($resultArray);
-        echo "Current Order Is: ", $_SESSION["liveOrderID"];
+        //echo "Current Order Is: ", $_SESSION["liveOrderID"];
     }
 
     public function addToOrder($itemID, $orderID)
     {
         $sql = "INSERT INTO orderdetails (OrderId, ProductId, Quantity) VALUES('{$orderID}', '{$itemID}', 1)";
+
+        $statement = $this->connection->prepare($sql);
+        $statement->execute();
+    }
+
+    public function cancelOrder()
+    {
+        $sql = "DELETE FROM Orders WHERE OrderId = '{$_SESSION["liveOrderID"]}'";
 
         $statement = $this->connection->prepare($sql);
         $statement->execute();

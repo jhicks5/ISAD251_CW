@@ -6,7 +6,6 @@ if(empty($_SESSION['currentCustID'])){
     header("Location: login.php");
 }
 $passedID = $_GET['itemID'];
-echo 'itemID', $passedID;
 ?>
 
 <div id="addOrderSuccess" class="card bg-success text-white w3-animate-opacity mt-4">
@@ -22,10 +21,8 @@ else{
 }
 
 if(!isset($_SESSION["liveOrderID"])){
-    if (isset($tablename)) {
-        $db = new repository();
-        $db->createOrder();
-    }
+    $db = new repository();
+    $db->createOrder();
 }
 
 if(isset($passedID)){

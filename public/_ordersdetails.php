@@ -7,7 +7,7 @@ $selectedOrder = $_GET['selectcontrol'];
 
 <div class="container pt-5">
     <?php
-    $tablename = 'OrderDetails';
+    $tablename = 'prevOrderDetails';
     $_SESSION["selectedOrderID"] = $selectedOrder;
     if(isset($tablename)) {
         $db = new Repository();
