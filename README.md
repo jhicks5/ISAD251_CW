@@ -20,22 +20,22 @@ https://www.youtube.com/watch?v=WZhouOIZV8I&feature=youtu.be
 
 # Screenshots of App pages
 # Home
-![](ISAD251_CW/blob/master/Z_Screenshots/homeScreen.png)
+![](ISAD251_CW/master/Z_Screenshots/homeScreen.png)
 # Login Screen
-![](ISAD251_CW/blob/master/Z_Screenshots/loginScreen.png)
+![](ISAD251_CW/master/Z_Screenshots/loginScreen.png)
 # Drinks Screen
-![](ISAD251_CW/blob/master/Z_Screenshots/drinksScreen.png)
+![](ISAD251_CW/master/Z_Screenshots/drinksScreen.png)
 # Food Screen
-![](ISAD251_CW/blob/master/Z_Screenshots/foodScreen.png)
+![](ISAD251_CW/master/Z_Screenshots/foodScreen.png)
 # Orders Screen
-![](ISAD251_CW/blob/master/Z_Screenshots/ordersScreen.png)
+![](ISAD251_CW/master/Z_Screenshots/ordersScreen.png)
 # Cancel Order Screen
-![](ISAD251_CW/blob/master/Z_Screenshots/cancelScreen.png)
+![](ISAD251_CW/master/Z_Screenshots/cancelScreen.png)
 
 # Other Browsers
 # Proof of order creation in chrome
-![](ISAD251_CW/blob/master/Z_Screenshots/chromeTest.png)
+![](ISAD251_CW/master/Z_Screenshots/chromeTest.png)
 
 # Proof of order creation in edge
-![](ISAD251_CW/blob/master/Z_Screenshots/edgeTest.png)
+![](ISAD251_CW/master/Z_Screenshots/edgeTest.png)
 
