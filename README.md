@@ -21,19 +21,27 @@ https://www.youtube.com/watch?v=WZhouOIZV8I&feature=youtu.be
 #Screenshots of App pages
 #Home
 ![](ISAD251_CW/Z_Screenshots/homeScreen.PNG)
+
 #Login Screen
 ![](ISAD251_CW/Z_Screenshots/homeScreen.PNG)
+
 #Drinks Screen
 ![](ISAD251_CW/Z_Screenshots/drinksScreen.PNG)
+
 #Food Screen
 ![](ISAD251_CW/Z_Screenshots/foodScreen.PNG)
+
 #Orders Screen
 ![](ISAD251_CW/Z_Screenshots/ordersScreen.PNG)
+
 #Cancel Order Screen
 ![](ISAD251_CW/Z_Screenshots/cancelScreen.PNG)
+
 
 #Other Browsers
 #Proof of order creation in chrome
 ![](ISAD251_CW/Z_Screenshots/chromeTest.PNG)
+
 #Proof of order creation in edge
 ![](ISAD251_CW/Z_Screenshots/edgeTest.PNG)
+
