@@ -20,22 +20,22 @@ https://www.youtube.com/watch?v=WZhouOIZV8I&feature=youtu.be
 
 # Screenshots of App pages
 # Home
-![](master/Z_Screenshots/homeScreen.png)
+![](blob/master/Z_Screenshots/homeScreen.png)
 # Login Screen
-![](master/Z_Screenshots/loginScreen.png)
+![](blob/master/Z_Screenshots/loginScreen.png)
 # Drinks Screen
-![](master/Z_Screenshots/drinksScreen.png)
+![](blob/master/Z_Screenshots/drinksScreen.png)
 # Food Screen
-![](master/Z_Screenshots/foodScreen.png)
+![](blob/master/Z_Screenshots/foodScreen.png)
 # Orders Screen
-![](master/Z_Screenshots/ordersScreen.png)
+![](blob/master/Z_Screenshots/ordersScreen.png)
 # Cancel Order Screen
-![](master/Z_Screenshots/cancelScreen.png)
+![](blob/master/Z_Screenshots/cancelScreen.png)
 
 # Other Browsers
 # Proof of order creation in chrome
-![](master/Z_Screenshots/chromeTest.png)
+![](blob/master/Z_Screenshots/chromeTest.png)
 
 # Proof of order creation in edge
-![](master/Z_Screenshots/edgeTest.png)
+![](blob/master/Z_Screenshots/edgeTest.png)
 
