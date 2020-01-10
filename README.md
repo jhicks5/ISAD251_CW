@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=WZhouOIZV8I&feature=youtu.be
 
 # Screenshots of App pages
 # Home
-![](ISAD251_CW/tree/master/Z_Screenshots/homeScreen.png)
+![](ISAD251_CW/Z_Screenshots/homeScreen.png)
 # Login Screen
 ![](ISAD251_CW/master/Z_Screenshots/loginScreen.png)
 # Drinks Screen
